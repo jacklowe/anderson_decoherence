@@ -1,6 +1,6 @@
 # anderson_decoherence
 
-Since Anderson localisation is a quantum effect it relies on quantum coherence, this project analyses what happens to such localised states when coherence is lost i.e. under decoherence/dephasing. The aim is therefore to evolve the system in a non-unitary manner.
+Since Anderson localisation (https://en.wikipedia.org/wiki/Anderson_localization) is a quantum effect it relies on quantum coherence, this project analyses what happens to such localised states when coherence is lost i.e. under decoherence/dephasing. The aim is therefore to evolve the system in a non-unitary manner.
 
 Specifically the module (anderson_decoherence.py) contains a class of an Anderson localised system with methods that construct the Hamiltonian, diagonalise the Hamiltonian to obtain and plot ground state. 
 
