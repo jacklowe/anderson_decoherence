@@ -95,3 +95,6 @@ class LocalisedSystem():
                                                              alpha[i]), -i)
                 gamma = d + gamma
         return gamma
+
+    def evolve_ground_state(self):
+        pass
