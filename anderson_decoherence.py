@@ -67,9 +67,4 @@ class LocalisedSystem():
         plt.show()
 
     def moments_of_peak(self):
-
-        #    def plot_eigenstates(self):
-        #        x = np.linspace(0, self.sites - 1, self.sites, dtype=int)
-        #        p = self.select_eigenstates()[l, self.select_ground_state()]
-        #        plt(x, real())
-        # plot(l, real(kets[l, ind] * conjugate(kets[l, ind])), 'r')
+        pass
