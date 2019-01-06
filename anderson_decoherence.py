@@ -1,8 +1,8 @@
 import scipy as sp
 import numpy as np
 import matplotlib.pyplot as plt
-# from scipy.linalg import expm
-# import scipy.sparse.linalg
+from scipy.linalg import expm
+import scipy.sparse.linalg
 
 
 class LocalisedSystem():
@@ -66,6 +66,32 @@ class LocalisedSystem():
 
     def plot_ground_state(self):
         x = np.linspace(0, self.sites - 1, self.sites, dtype=int)
-        plt.plot(x, np.real(self.ground_state_ket()) *
-                 np.conjugate(self.ground_state_ket()))
+        plt.plot(x, np.absolute(np.real(self.ground_state_ket()) *
+                                np.conjugate(self.ground_state_ket())))
         plt.show()
+
+    def construct_density_matrix(self):
+        return sp.outer(np.conjugate(self.ground_state_ket()).T,
+                        self.ground_state_ket())
+
+    def dt(self, a=0.1, T=3, n=30):
+        """a: decoherence decay rate constant. i.e. higher a faster decoherence.
+        T: time evolution
+        n: number of steps in Trotter decomposition"""
+        return T / n
+
+    def construct_propagator(self):
+        return expm(-1j * self.make_hamiltonian() * self.dt()).toarray()
+
+    def trotter_decomposition(self, a=0.1):
+        alpha = [i * a for i in range(self.sites)]
+        gamma = np.zeros((self.sites, self.sites))
+        for i in range(0, self.sites):
+            c = np.diag(np.ones(self.sites - i) * np.e**(-self.dt() *
+                                                         alpha[i]), i)
+            gamma = c + gamma
+            if i != 0:
+                d = np.diag(np.ones(self.sites - i) * np.e**(-self.dt() *
+                                                             alpha[i]), -i)
+                gamma = d + gamma
+        return gamma

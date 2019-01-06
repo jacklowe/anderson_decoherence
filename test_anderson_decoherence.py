@@ -2,4 +2,5 @@ from anderson_decoherence import *
 
 sys = LocalisedSystem()
 
-sys.plot_ground_state()
+print(sys.trotter_decomposition())
+# print(sys.construct_density_matrix())
