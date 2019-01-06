@@ -6,7 +6,7 @@ Specifically the module contains a class of an Anderson localised system with me
 
 Will add methods that perform statistics over an ensemble of ground states to analyse effects of changing parameters in Hamiltonian e.g. disorder strength W and those that evolve system in a non-unitary way thus introducing decoherence. 
 
-# Physics
+# Background
 
 The Hamiltonian may be written 
 
