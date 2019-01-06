@@ -74,16 +74,18 @@ class LocalisedSystem():
         return sp.outer(np.conjugate(self.ground_state_ket()).T,
                         self.ground_state_ket())
 
-    def dt(self, a=0.1, T=3, n=30):
-        """a: decoherence decay rate constant. i.e. higher a faster decoherence.
+    def dt(self, T=3, n=30):
+        """
         T: time evolution
-        n: number of steps in Trotter decomposition"""
+        n: number of steps in Trotter decomposition
+        """
         return T / n
 
     def construct_propagator(self):
         return expm(-1j * self.make_hamiltonian() * self.dt()).toarray()
 
     def trotter_decomposition(self, a=0.1):
+        '''a: decoherence decay-rate constant.'''
         alpha = [i * a for i in range(self.sites)]
         gamma = np.zeros((self.sites, self.sites))
         for i in range(0, self.sites):

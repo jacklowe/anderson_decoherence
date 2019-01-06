@@ -25,3 +25,11 @@ i.e. a flat distribution. We can also use a Gaussian distribution
 note that W and the standard deviation here represent the disorder strength in the system. This can be viewed heuristically as the amount of randomness in the system. The higher the disorder strength the more sharply localised the states are in space. If the disorder strength is too large, when evolved the eigenstate may not spread at all and remain localised.
 
 This is interesting because the eigenstates are *localised*, i.e. under unitary transformations such as evolution in time the eigenstate does not move. For dimensions less than 3 P.W. Anderson showed *all* eigenstates of the system are localised. Here we work in d=1 so all our eigenstates are localised.  
+
+# Non-unitary evolution
+
+Typically in quantum mechanics we are interested in unitary evolution in time. I.e. that given by the Schroedinger equation. However in this case since our state is temporally and spatially localised the Schroedinger equation evolution has no effect on the eigenstate (they commute). 
+
+Evolution given by the Schroedinger equation preserves quantum-coherence. We are interested in the situation where such coherence is lost. Typically this is viewed as a coupling between the system and environment and may be viewed as a quantum-to-classical transition.
+
+How do we represent this non-unitary time evolution here?
