@@ -98,3 +98,6 @@ class LocalisedSystem():
 
     def evolve_ground_state(self):
         pass
+
+    def plot_evolution(self):
+        pass
