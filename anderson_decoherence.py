@@ -1,8 +1,8 @@
 import scipy as sp
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.linalg import expm
-import scipy.sparse.linalg
+# from scipy.linalg import expm
+# import scipy.sparse.linalg
 
 
 class LocalisedSystem():
@@ -60,11 +60,12 @@ class LocalisedSystem():
         ind = np.argpartition(self.find_low_energy_states()[0], k)[:k]
         return ind
 
+    def ground_state_ket(self):
+        z = np.linspace(0, self.sites - 1, self.sites, dtype=int)
+        return self.select_eigenstates()[z, self.select_ground_state()]
+
     def plot_ground_state(self):
         x = np.linspace(0, self.sites - 1, self.sites, dtype=int)
-        ket = self.select_eigenstates()[x, self.select_ground_state()]
-        plt.plot(x, np.real(ket) * np.conjugate(ket))
+        plt.plot(x, np.real(self.ground_state_ket()) *
+                 np.conjugate(self.ground_state_ket()))
         plt.show()
-
-    def moments_of_peak(self):
-        pass
