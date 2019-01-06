@@ -6,6 +6,8 @@ Specifically the module contains a class of an Anderson localised system with me
 
 Will add methods that perform statistics over an ensemble of ground states to analyse effects of changing parameters in Hamiltonian e.g. disorder strength W and those that evolve system in a non-unitary way thus introducing decoherence. 
 
+# Physics
+
 The Hamiltonian may be written 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=H&space;=&space;\sum_i\(&space;\epsilon_i&space;|i><i|&space;&plus;&space;\mu|i&plus;1><i|&space;&plus;&space;\mu|i><i&plus;1|\)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H&space;=&space;\sum_i\(&space;\epsilon_i&space;|i><i|&space;&plus;&space;\mu|i&plus;1><i|&space;&plus;&space;\mu|i><i&plus;1|\)" title="H = \sum_i\( \epsilon_i |i><i| + \mu|i+1><i| + \mu|i><i+1|\)" /></a>
@@ -19,3 +21,5 @@ We distribute the energy levels according to
 i.e. a flat distribution. We can also use a Gaussian distribution
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=P(\epsilon_i)&space;=&space;\frac{1}{\sqrt{2\pi\sigma^2}}\exp{(-\epsilon_i^2/2\sigma^2)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\epsilon_i)&space;=&space;\frac{1}{\sqrt{2\pi\sigma^2}}\exp{(-\epsilon_i^2/2\sigma^2)}" title="P(\epsilon_i) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp{(-\epsilon_i^2/2\sigma^2)}" /></a>.
+
+This is interesting because the eigenstates are *localised*, i.e. under unitary transformations such as evolution in time the eigenstate does not move. For dimensions less than 3 P.W. Anderson showed *all* eigenstates of the system are localised. Here we work in d=1 so all our eigenstates are localised.  
