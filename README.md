@@ -1,6 +1,6 @@
 # anderson_decoherence
 
-Since Anderson localisation is a quantum effect it relies on quantum coherence, therefore this project analyses what happens to such localised states when coherence is lost i.e. under decoherence/dephasing.
+Since Anderson localisation is a quantum effect it relies on quantum coherence, this project analyses what happens to such localised states when coherence is lost i.e. under decoherence/dephasing.
 
 Specifically the module contains a class of an Anderson localised system with methods that construct the Hamiltonian, diagonalise the Hamiltonian to obtain and plot ground state. 
 
@@ -20,6 +20,8 @@ We distribute the energy levels according to
 
 i.e. a flat distribution. We can also use a Gaussian distribution
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=P(\epsilon_i)&space;=&space;\frac{1}{\sqrt{2\pi\sigma^2}}\exp{(-\epsilon_i^2/2\sigma^2)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\epsilon_i)&space;=&space;\frac{1}{\sqrt{2\pi\sigma^2}}\exp{(-\epsilon_i^2/2\sigma^2)}" title="P(\epsilon_i) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp{(-\epsilon_i^2/2\sigma^2)}" /></a>.
+<a href="https://www.codecogs.com/eqnedit.php?latex=P(\epsilon_i)&space;=&space;\frac{1}{\sqrt{2\pi\sigma^2}}\exp{(-\epsilon_i^2/2\sigma^2)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?P(\epsilon_i)&space;=&space;\frac{1}{\sqrt{2\pi\sigma^2}}\exp{(-\epsilon_i^2/2\sigma^2)}" title="P(\epsilon_i) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp{(-\epsilon_i^2/2\sigma^2)}" /></a>
+
+note that W and the standard deviation here represent the disorder strength in the system. This can be viewed heuristically as the amount of randomness in the system. The higher the disorder strength the more sharply localised the states are in space. If the disorder strength is too large, when evolved the eigenstate may not spread at all and remain localised.
 
 This is interesting because the eigenstates are *localised*, i.e. under unitary transformations such as evolution in time the eigenstate does not move. For dimensions less than 3 P.W. Anderson showed *all* eigenstates of the system are localised. Here we work in d=1 so all our eigenstates are localised.  
