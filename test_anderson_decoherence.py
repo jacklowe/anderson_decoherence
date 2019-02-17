@@ -1,6 +1,12 @@
-from anderson_decoherence import *
+"Short test demo"
 
-sys = LocalisedSystem()
+import anderson_decoherence
 
-print(sys.trotter_decomposition())
-# print(sys.construct_density_matrix())
+
+def main():
+    "Demo of anderson_decoherence module features"
+    sys_1 = anderson_decoherence.System()
+
+    sys_1.plot_ground_state()
+
+main()
