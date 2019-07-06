@@ -12,7 +12,7 @@ The Hamiltonian may be written
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=H&space;=&space;\sum_i\(&space;\epsilon_i&space;|i><i|&space;&plus;&space;\mu|i&plus;1><i|&space;&plus;&space;\mu|i><i&plus;1|\)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H&space;=&space;\sum_i\(&space;\epsilon_i&space;|i><i|&space;&plus;&space;\mu|i&plus;1><i|&space;&plus;&space;\mu|i><i&plus;1|\)" title="H = \sum_i\( \epsilon_i |i><i| + \mu|i+1><i| + \mu|i><i+1|\)" /></a>
 
-which can be represented as an ixi dimensional matrix with energies on the diagonal and hopping elements on the off-diagonal representing transport from site i to i+1 etc.
+which can be represented as an i dimensional square matrix with energies on the diagonal and hopping elements on the off-diagonal representing transport from site i to i+1 etc.
 
 We distribute the energy levels according to
 
