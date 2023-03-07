@@ -1,4 +1,4 @@
-# anderson_decoherence
+# The effect of quantum decoherence on Anderson localisation
 
 Since Anderson localisation (https://en.wikipedia.org/wiki/Anderson_localization) is a quantum effect it relies on quantum coherence, this project analyses what happens to such localised states when coherence is lost i.e. under decoherence/dephasing. The aim is therefore to evolve the system in a non-unitary manner.
 
